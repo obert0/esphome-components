@@ -12,9 +12,7 @@ Example:
 
 # Setup external_components from my repo
 external_components:
-  - source:
-      type: git
-      url: file:///Users/obert0/esphome-components/components
+  - source: github://obert0/esphome-components
     components: [rrh62000]
 
 # Declare I2C Bus
