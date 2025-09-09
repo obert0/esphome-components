@@ -10,7 +10,7 @@ You need an `i2c:` component configured.
 Example:
 ```yaml
 
-# For local components
+# Setup external_components from my repo
 external_components:
   - source:
       type: git
