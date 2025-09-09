@@ -22,54 +22,55 @@ i2c:
   scl: GPIO22
   scan: True
 
-- platform: rrh62000
-    id: air_sensor
-    # If just one IC2 bus configure it will be choose by default
-    # Sensor configuration. See documentation
-    # Actual default value
-    set_moving_average: 10
-    set_cleaning_time_int: 20160
-    set_cleaning_time: 10
-    set_fan_speed: 86  
-    reload_config: true   # Behavior on reset. If true it will reload the config. 
-    update_interval: 600s  
-
-    # Optional sensors available. See documentation
-    # All sensors are extract anyway    
-    pm_0_3um:
-      name: "Number concentration of particle size 0.3-10"
-    pm_0_5um:
-      name: "Number concentration of particle size 0.5-10"
-    pm_1_0um:
-      name: "Number concentration of particle size 1.0-10"
-    pm_2_5um:
-      name: "Number concentration of particle size 2.5-10"
-    pm_4_0um:
-      name: "Number concentration of particle size 4.0-10"                        
-    pmc_1_0:
-      name: "Mass concentration of particle size 1.0 - Reference to KCl particle"
-    pmc_2_5:
-      name: "Mass concentration of particle size 2.5 - Reference to KCl particle"
-    pmc_10_0:
-      name: "Mass concentration of particle size 10.0 - Reference to KCl particle"    
-    pm_1_0:
-      name: "Mass concentration of particle size 1.0 - Reference to cigarette smoke"
-    pm_2_5:
-      name: "Mass concentration of particle size 2.5 - Reference to cigarette smoke"
-    pm_10_0:
-      name: "Mass concentration of particle size 10.0 - Reference to cigarette smoke"               
-    temperature:
-      name: "Sensor Temperature"
-    humidity:
-      name: "Sensor Humidity"
-    tvoc:
-      name: "Total volatile organic compounds (TVOC)"        
-    eco2:
-      name: "Estimated carbon dioxide (eCO2) level"         
-    air_quality_level:
-      name: "Indoor Air Quality level according to UBA"  
-    fan_speed:
-      name: "RRH62000 Fan Speed"     
+sensor:
+  - platform: rrh62000
+      id: air_sensor
+      # If just one IC2 bus configure it will be choose by default
+      # Sensor configuration. See documentation
+      # Actual default value
+      set_moving_average: 10
+      set_cleaning_time_int: 20160
+      set_cleaning_time: 10
+      set_fan_speed: 86  
+      reload_config: true   # Behavior on reset. If true it will reload the config. 
+      update_interval: 600s  
+  
+      # Optional sensors available. See documentation
+      # All sensors are extract anyway    
+      pm_0_3um:
+        name: "Number concentration of particle size 0.3-10"
+      pm_0_5um:
+        name: "Number concentration of particle size 0.5-10"
+      pm_1_0um:
+        name: "Number concentration of particle size 1.0-10"
+      pm_2_5um:
+        name: "Number concentration of particle size 2.5-10"
+      pm_4_0um:
+        name: "Number concentration of particle size 4.0-10"                        
+      pmc_1_0:
+        name: "Mass concentration of particle size 1.0 - Reference to KCl particle"
+      pmc_2_5:
+        name: "Mass concentration of particle size 2.5 - Reference to KCl particle"
+      pmc_10_0:
+        name: "Mass concentration of particle size 10.0 - Reference to KCl particle"    
+      pm_1_0:
+        name: "Mass concentration of particle size 1.0 - Reference to cigarette smoke"
+      pm_2_5:
+        name: "Mass concentration of particle size 2.5 - Reference to cigarette smoke"
+      pm_10_0:
+        name: "Mass concentration of particle size 10.0 - Reference to cigarette smoke"               
+      temperature:
+        name: "Sensor Temperature"
+      humidity:
+        name: "Sensor Humidity"
+      tvoc:
+        name: "Total volatile organic compounds (TVOC)"        
+      eco2:
+        name: "Estimated carbon dioxide (eCO2) level"         
+      air_quality_level:
+        name: "Indoor Air Quality level according to UBA"  
+      fan_speed:
+        name: "RRH62000 Fan Speed"     
        
 # Button required rrh62000 sensor reference
 button:
